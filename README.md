@@ -109,6 +109,27 @@ revise / weaken / keep / retire the model
 
 The durable value is not a secret prompt. It is the longitudinal history of **what was observed, how an interpretation formed, which evidence was independent, what was tried in reality, and how the model changed afterward.**
 
+## Public research notes
+
+[`notes/`](./notes/) 保存这个方法**是怎么长出来的**。
+
+这些笔记是某个时间点的 seed、疑问或设计想法，不会因为被写进仓库就自动成为正式原则。一个想法只有在真实 dogfood / failure 中继续站得住，并进入对应 eval 后，才可能进一步进入 `PRINCIPLES.md` 或 `PROMPT.md`。
+
+```text
+notes/          = 思想种子 / 研究日志（无默认 authority）
+examples/       = 匿名化说明案例
+evals/          = 行为合同
+PRINCIPLES.md   = 当前协议原则
+PROMPT.md       = 当前可直接使用的协议
+CHANGELOG.md    = 正式变化历史
+```
+
+这里也保持一条硬边界：
+
+> **公开仓库记录方法如何长出来；私人仓库记录一个人的经历如何变化。**
+
+个人关系、私人 Reality Test、自我认知档案等不应该因为对项目有启发就进入公开 notes。
+
 ## What this is not
 
 Cognitive Mirror is not:
@@ -136,6 +157,11 @@ cognitive-mirror/
 ├── CONTRIBUTING.md
 ├── CHANGELOG.md
 ├── LICENSE
+├── notes/
+│   ├── README.md
+│   ├── 2026-09-07-memory-without-performative-concern.md
+│   ├── 2026-09-07-chat-first-not-chat-only.md
+│   └── 2026-09-07-open-protocol-commercial-experience.md
 ├── examples/
 │   └── defensive-subordinate.md
 └── evals/
