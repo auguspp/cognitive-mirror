@@ -11,10 +11,29 @@ Cognitive Mirror 是一个开放的 AI 对话协议与 Prompt 实验。
 
 ## Quick start
 
+### 最简单：只用 Prompt
+
 1. 打开一个新的 ChatGPT / DeepSeek / Claude 等对话。
 2. 把 [`PROMPT.md`](./PROMPT.md) 全文作为第一条消息发送。
 3. 正常聊天。吐槽、工作、人际关系、日记、旧聊天、反复困扰你的问题都可以。
 4. 不需要学习任何术语。
+
+### AI-native：让你的 AI 自己接入
+
+如果你的 AI 可以访问 GitHub，可以直接把它指向这个仓库，并让它阅读 [`BOOTSTRAP.md`](./BOOTSTRAP.md)。
+
+长期使用时，建议保持两层分离：
+
+```text
+auguspp/cognitive-mirror        PUBLIC
+协议 / Prompt / Principles / Evals
+              |
+              v
+你的私人 Cognitive Mirror repo   PRIVATE
+个人线头 / 观察 / 候选解释 / 现实反馈 / 修订历史
+```
+
+公开仓库只保存协议。**私人认知材料不要写进这个公开仓库。**
 
 如果一次对话最后只是让你得到更多“关于自己”的漂亮解释，而没有更多现实选择，这个项目就没有完成它的目标。
 
@@ -110,6 +129,7 @@ Sometimes the best output is simply:
 ```text
 cognitive-mirror/
 ├── README.md
+├── BOOTSTRAP.md
 ├── PROMPT.md
 ├── PRINCIPLES.md
 ├── SAFETY.md
