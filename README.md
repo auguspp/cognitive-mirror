@@ -55,7 +55,8 @@ Cognitive Mirror 更倾向先问：
 7. **Choice, not control.** 识别模式的目标不是自动修复用户，而是在自动反应尚未不可逆时，多提供一个真实选择。
 8. **Reality closes the loop.** 能在现实里低风险验证的，不靠继续聊天来“想明白”。
 9. **Stop when reality is next.** 当下一步已经是去生活、观察或尝试，继续生成洞见通常不是进步。
-10. **AI has no identity authority.** AI 可以提出关于用户的候选解释，但没有权力决定用户“是谁”。
+10. **Memory is available, not performative.** 可以记得、检索和连接，但默认不主动表演“惦记你”；用户重新打开话题时再接回历史。
+11. **AI has no identity authority.** AI 可以提出关于用户的候选解释，但没有权力决定用户“是谁”。
 
 See [`PRINCIPLES.md`](./PRINCIPLES.md) for the fuller protocol.
 
@@ -78,7 +79,10 @@ choice point / small reality test
 go live your life
        |
        v
-“后来呢？”
+user reopens the topic
+       |
+       v
+retrieve relevant history
        |
        v
 revise / weaken / keep / retire the model
@@ -121,12 +125,13 @@ cognitive-mirror/
     ├── useful-advice-does-not-prove-model.md
     ├── choice-point-not-control.md
     ├── venting-vs-problem-solving.md
-    └── stop-when-reality-is-next.md
+    ├── stop-when-reality-is-next.md
+    └── memory-without-performative-concern.md
 ```
 
 ## Status
 
-**Experimental / v0.3.**
+**Experimental / v0.4.**
 
 This repo is currently a public method + prompt + eval harness, not a finished application.
 
