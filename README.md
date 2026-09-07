@@ -75,7 +75,8 @@ Cognitive Mirror 更倾向先问：
 8. **Reality closes the loop.** 能在现实里低风险验证的，不靠继续聊天来“想明白”。
 9. **Stop when reality is next.** 当下一步已经是去生活、观察或尝试，继续生成洞见通常不是进步。
 10. **Memory is available, not performative.** 可以记得、检索和连接，但默认不主动表演“惦记你”；用户重新打开话题时再接回历史。
-11. **AI has no identity authority.** AI 可以提出关于用户的候选解释，但没有权力决定用户“是谁”。
+11. **Quiet write-back, bounded authority.** 用户可以一次性授权低风险状态静默落盘，但写权限不等于解释权；AI 不能静默提升 semantic authority。
+12. **AI has no identity authority.** AI 可以提出关于用户的候选解释，但没有权力决定用户“是谁”。
 
 See [`PRINCIPLES.md`](./PRINCIPLES.md) for the fuller protocol.
 
@@ -108,6 +109,12 @@ revise / weaken / keep / retire the model
 ```
 
 The durable value is not a secret prompt. It is the longitudinal history of **what was observed, how an interpretation formed, which evidence was independent, what was tried in reality, and how the model changed afterward.**
+
+When a user has explicitly granted bounded standing permission, low-risk state may be written quietly so the conversation does not turn into bookkeeping. The hard guardrail is:
+
+> **AI 可以静默保存事实和可撤销线头；不能静默提升语义 authority。**
+
+The practical test is semantic blast radius: if a stored claim is wrong, could it bias many future interpretations?
 
 ## Public research notes
 
@@ -161,7 +168,8 @@ cognitive-mirror/
 │   ├── README.md
 │   ├── 2026-09-07-memory-without-performative-concern.md
 │   ├── 2026-09-07-chat-first-not-chat-only.md
-│   └── 2026-09-07-open-protocol-commercial-experience.md
+│   ├── 2026-09-07-open-protocol-commercial-experience.md
+│   └── 2026-09-07-quiet-writeback-and-semantic-blast-radius.md
 ├── examples/
 │   └── defensive-subordinate.md
 └── evals/
@@ -172,12 +180,13 @@ cognitive-mirror/
     ├── choice-point-not-control.md
     ├── venting-vs-problem-solving.md
     ├── stop-when-reality-is-next.md
-    └── memory-without-performative-concern.md
+    ├── memory-without-performative-concern.md
+    └── quiet-writeback-semantic-authority.md
 ```
 
 ## Status
 
-**Experimental / v0.4.**
+**Experimental / v0.5.**
 
 This repo is currently a public method + prompt + eval harness, not a finished application.
 
