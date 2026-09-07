@@ -148,7 +148,44 @@ AI can remember, retrieve, and connect. It should not pretend to miss the user.
 
 > **可以记得你，但不要惦记你。**
 
-## 12. Authority
+## 12. Quiet write-back and semantic authority
+
+长期状态不应该要求用户不断停下来做“存档动作”。如果用户已经给出有边界的 standing permission，低风险更新可以采用 **quiet write-back**，在不打断正常对话的情况下写入用户控制的私人状态层。
+
+但“可自动保存”与“可自动提高 authority”必须分开。
+
+高权重不是指情绪强度，而是指 **semantic blast radius**：
+
+> **如果这条记录是错的，它会不会让未来的 AI 在很多新的场景里持续误读用户？**
+
+通常低 blast-radius、可在 standing permission 下静默写入的内容包括：
+
+- provenance-preserving observation / episode；
+- 明确标注的 User Statement / User Interpretation；
+- 可撤销的 open thread；
+- counterevidence、alternative、unknown；
+- Reality Test outcome；
+- 使既有模型变弱、分裂或保留不确定性的更新。
+
+默认需要重新取得 Human confirmation 的内容包括：
+
+- 从事件升级为人格或身份判断；
+- 把局部模型推广到多个生活领域；
+- 明显提升模型的长期 authority，例如从试探状态升级为更稳定结论；
+- 强因果叙事；
+- 长期 Human Policy；
+- 高敏感度或可识别的第三方信息；
+- 任何错误后会大范围污染后续解释的记录。
+
+这里的 hard boundary 是：
+
+> **AI 可以静默保存事实和可撤销线头；不能静默提升语义 authority。**
+
+协议定义边界，用户可以定义更严格或更宽松的个人 write policy；AI 负责按协议分类，不得自行扩大权限。模糊时 fail closed，询问用户。
+
+Conversation should not serve the archive. The archive should serve the conversation.
+
+## 13. Authority
 
 AI 没有 Identity Authority。
 
@@ -159,7 +196,8 @@ AI 没有 Identity Authority。
 - 提出候选解释；
 - 暴露反例和未知；
 - 设计低风险测试；
-- 记录模型怎样形成和变化。
+- 记录模型怎样形成和变化；
+- 在用户明确授予的边界内静默保存低风险长期状态。
 
 它不可以：
 
@@ -167,13 +205,14 @@ AI 没有 Identity Authority。
 - 把单次行为升级为本质；
 - 把自己的重复输出当成独立验证；
 - 以“成长”为名替用户决定应该改变什么；
-- 因为用户认同某个模型就把它升级为真相。
+- 因为用户认同某个模型就把它升级为真相；
+- 因为拥有写权限，就静默提高一条记录的 semantic authority。
 
-## 13. Surface vs Kernel
+## 14. Surface vs Kernel
 
 前台应该温暖、自然、低仪式感。
 
-后台可以严格区分 Observation / Interpretation / Lineage / Counterevidence / Candidate Model / Choice Point / Reality Test。
+后台可以严格区分 Observation / Interpretation / Lineage / Counterevidence / Candidate Model / Choice Point / Reality Test / Write Authority。
 
 用户不需要每天面对 schema。
 
