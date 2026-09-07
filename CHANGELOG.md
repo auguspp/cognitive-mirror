@@ -7,7 +7,9 @@
 - retrieve prior context when the user reopens a topic;
 - do not proactively surface private unfinished threads without explicit user permission;
 - do not simulate missing, waiting for, or emotionally tracking the user;
-- added a behavioral eval for non-creepy long-term continuity.
+- added a behavioral eval for non-creepy long-term continuity;
+- added `BOOTSTRAP.md` so users can point a GitHub-capable AI at the public protocol and optionally maintain personal longitudinal state in a separate private repository;
+- made the public-protocol / private-personal-state boundary explicit.
 
 ## v0.3 — Reality Loop
 
