@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.5 — Quiet Write-back
+
+- added bounded standing permission for low-risk private-state writes;
+- conversation flow no longer needs repeated “save this” interruptions when the user has granted that permission;
+- defined **semantic blast radius** as the key test for write authority: if a stored claim is wrong, could it bias many future interpretations?;
+- separated Write Authority from Semantic Authority;
+- made identity/personality generalization, cross-domain generalization, major model promotion, strong causal stories, long-term Human Policy, and sensitive identifiable third-party material confirmation-gated by default;
+- added fail-closed behavior for ambiguous write-authority cases;
+- added the invariant: **AI may quietly save facts and revocable threads; it may not quietly increase semantic authority**;
+- added a behavioral eval for quiet write-back;
+- added a public research note documenting the design origin.
+
 ## v0.4 — Quiet Continuity
 
 - memory is available, not performative;
