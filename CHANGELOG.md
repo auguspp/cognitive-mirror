@@ -9,7 +9,9 @@
 - do not simulate missing, waiting for, or emotionally tracking the user;
 - added a behavioral eval for non-creepy long-term continuity;
 - added `BOOTSTRAP.md` so users can point a GitHub-capable AI at the public protocol and optionally maintain personal longitudinal state in a separate private repository;
-- made the public-protocol / private-personal-state boundary explicit.
+- made the public-protocol / private-personal-state boundary explicit;
+- added `notes/` as a public research-log layer for time-stamped seeds and design thoughts that have no default protocol authority;
+- documented the boundary: public history explains how the method evolves; private history belongs to the person.
 
 ## v0.3 — Reality Loop
 
